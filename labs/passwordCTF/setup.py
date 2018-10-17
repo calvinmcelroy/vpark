@@ -158,7 +158,7 @@ elif "alice" in name or "bob" in name or "carol" in name or "david" in name:
 		os.system("sudo touch /home/carol/Videos/password0.txt")
 		os.system("sudo touch /home/carol/Videos/password1.txt")
 		os.system("sudo echo \"You found the final password, but it is encrypted again!\" >> /home/carol/Documents/password3.txt")
-		os.system("sudo echo \"David's Password: 6ca2d12b141a234d5e5ba35d8d933884f9aba920\" >> /home/carol/Documents/password3.txt")
+		os.system("sudo echo \"david:6ca2d12b141a234d5e5ba35d8d933884f9aba920\" >> /home/carol/Documents/password3.txt")
 		os.system("sudo chown -R carol /home/carol")
 		os.system("sudo chgrp -R carol /home/carol")
 		
