@@ -31,6 +31,7 @@
       <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo apt update " shell="/bin/sh"/>
       <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo apt install -y python-pip" shell="/bin/sh"/>
       <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo pip install pexpect " shell="/bin/sh"/>
+      <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo python /local/sniffer.py" shell="/bin/sh"/>
 		</services>
     <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-0"/>
   </node>
