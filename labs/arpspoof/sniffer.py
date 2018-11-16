@@ -4,5 +4,5 @@ from scapy.all import *
 def print_pkt(pkt):
     pkt.show()
 
-pkt = sniff(filter='udp port 5001',prn=print_pkt)
+pkt = sniff(iface='eth1',filter='arp',prn=print_pkt)
 
