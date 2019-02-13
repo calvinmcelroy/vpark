@@ -2,7 +2,9 @@ import os
 
 os.system("sudo apt-get update -y")
 os.system("sudo apt-get install apache2 -y")
-os.system("sudo apt-get install mysql-server -y")
+os.system("sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password vpark'")
+os.system("sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password vpark'")
+os.system("sudo apt-get -y install mysql-server")
 os.system("sudo apt-get install -y software-properties-common")
 os.system("sudo add-apt-repository ppa:ondrej/php -y")
 os.system("sudo apt-get update")
