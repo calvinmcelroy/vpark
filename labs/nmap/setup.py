@@ -1,13 +1,36 @@
 import os
+import pexpect
 
-os.system("sudo apt-get update -y")
-os.system("sudo apt-get install apache2 -y")
-os.system("sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password vpark'")
-os.system("sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password vpark'")
-os.system("sudo apt-get -y install mysql-server")
-os.system("sudo apt-get install -y software-properties-common")
-os.system("sudo add-apt-repository ppa:ondrej/php -y")
-os.system("sudo apt-get update")
-os.system("sudo apt-get install php5.6 php5.6-mysql php-xdebug libapache2-mod-php5.6 php5.6-mbstring -y")
-os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/phpinfo.php")
-os.system("sudo mv phpinfo.php /var/www/html/phpinfo.php")
+os.system("hostname > file.txt")
+
+temp_file = open("file.txt", "r")
+
+name = ""
+
+for line in temp_file:
+	name = line[:line.index(".")]
+
+print(name)
+temp_file.close()
+os.system("sudo rm file.txt")
+
+if "attacker" in name:
+  os.system("sudo apt-get -y update")
+	os.system("sudo apt-get -y install nmap")
+elif "webserver" in name or "mailserver" in name or "printserver" in name:
+	if "webserver" in name:
+		os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/setupweb.sh")
+    os.system("sudo chmod 755 setupweb.sh") 
+    os.system("sudo ./setupweb.sh")
+    os.system("sudo rm setupweb.sh")
+	elif "mailserver" in name:
+		os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/setupmail.sh")
+    os.system("sudo chmod 755 setupmail.sh")    
+    os.system("sudo ./setupmail.sh")
+    os.system("sudo rm setupmail.sh")
+	elif "printserver" in name:
+		os.system("sudo apt-get -y update")
+    os.system("sudo apt-get -y install samba")
+    
+
+		
