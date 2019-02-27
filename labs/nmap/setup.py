@@ -1,19 +1,17 @@
 import os
 import pexpect
 
+#Get name of machine
 os.system("hostname > file.txt")
-
 temp_file = open("file.txt", "r")
-
 name = ""
-
 for line in temp_file:
 	name = line[:line.index(".")]
-
 print(name)
 temp_file.close()
 os.system("sudo rm file.txt")
 
+#Install needed config
 if "attacker" in name:
   os.system("sudo apt-get -y update")
 	os.system("sudo apt-get -y install nmap")
