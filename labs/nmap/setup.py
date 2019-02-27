@@ -1,5 +1,4 @@
 import os
-import pexpect
 
 #Get name of machine
 os.system("hostname > file.txt")
