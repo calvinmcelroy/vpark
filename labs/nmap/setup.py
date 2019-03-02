@@ -14,17 +14,17 @@ os.system("sudo rm file.txt")
 if "attacker" in name:
 	os.system("sudo apt-get -y update")
 	os.system("sudo apt-get -y install nmap")
-if "webserver" in name:
+if "server1" in name:
 	os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/setupweb.sh")
     	os.system("sudo chmod 755 setupweb.sh") 
     	os.system("sudo ./setupweb.sh")
     	os.system("sudo rm setupweb.sh")
-if "mailserver" in name:
+if "server2" in name:
 	os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/setupmail.sh")
     	os.system("sudo chmod 755 setupmail.sh")    
     	os.system("sudo ./setupmail.sh")
     	os.system("sudo rm setupmail.sh")
-if "printserver" in name:
+if "server3" in name:
 	os.system("sudo apt-get -y update")
     	os.system("sudo apt-get -y install samba")
     
