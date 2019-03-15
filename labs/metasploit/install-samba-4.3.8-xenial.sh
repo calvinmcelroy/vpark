@@ -4,8 +4,6 @@
 # This script will install an old version on samba (4.3.8) on a ubuntu (xenial) host.
 # This environment will setup a target to practice metasploit against CVE-2017-7494
 #####################################################################################
-sudo mkdir /tmp/oldsmb
-cd /tmp/oldsmb
 sudo wget http://archive.ubuntu.com/ubuntu/pool/main/t/talloc/libtalloc2_2.1.5-2_amd64.deb
 sudo dpkg -i libtalloc2_2.1.5-2_amd64.deb
 sudo wget http://launchpadlibrarian.net/248051543/libtdb1_1.3.8-2_amd64.deb
