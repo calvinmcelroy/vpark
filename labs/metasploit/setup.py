@@ -26,4 +26,9 @@ if "server2" in name:
     	os.system("sudo rm setupmail.sh")
 if "server3" in name:
 	os.system("sudo apt-get -y update")
-    	os.system("sudo apt-get -y install samba")
+	os.system("sudo mkdir /tmp/oldsmb")
+	os.system("sudo cd /tmp/oldsmb")
+	os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/metasploit/install-samba-4.3.8-xenial.sh")
+    	os.system("sudo chmod 755 install-samba-4.3.8-xenial.sh")    
+    	os.system("sudo ./install-samba-4.3.8-xenial.sh")
+    	os.system("sudo rm install-samba-4.3.8-xenial.sh")
