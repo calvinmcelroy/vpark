@@ -11,9 +11,6 @@ temp_file.close()
 os.system("sudo rm file.txt")
 
 #Install needed config
-if "attacker" in name:
-	os.system("sudo apt-get -y update")
-	os.system("sudo apt-get -y install nmap")
 if "server1" in name:
 	os.system("sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/setupweb.sh")
     	os.system("sudo chmod 755 setupweb.sh") 
