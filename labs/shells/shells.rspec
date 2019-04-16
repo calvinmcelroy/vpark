@@ -13,7 +13,7 @@
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="default-vm"/>
 	  <services xmlns="http://www.geni.net/resources/rspec/3">
-      <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo wget https://raw.githubusercontent.com/calvinmcelroy/vpark/master/labs/nmap/setup.py" shell="/bin/sh"/>
+      <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo wget https://github.com/calvinmcelroy/vpark/blob/master/labs/shells/setup.py" shell="/bin/sh"/>
       <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo python setup.py " shell="/bin/sh"/>
       <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo rm setup.py " shell="/bin/sh"/>
     </services>
