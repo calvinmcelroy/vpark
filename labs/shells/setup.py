@@ -15,5 +15,9 @@ if "Victim" in name:
 	os.system("sudo apt-get remove -y netcat-openbsd")
 	os.system("sudo apt-get update")
     	os.system("sudo apt-get install netcat-traditional") 
+if "Attacker" in name:
+	os.system("sudo apt-get remove -y netcat-openbsd")
+    	os.system("sudo apt-get install netcat-traditional") 
+
 
 
